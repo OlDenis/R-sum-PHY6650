@@ -2,12 +2,12 @@
 % This is all preamble stuff that you don't have to worry about.
 % Head down to where it says "Start here"
 % --------------------------------------------------------------
- 
+
 \documentclass[12pt]{article}
- 
-\usepackage[margin=1in]{geometry} 
+
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
-\usepackage[margin=1in]{geometry} 
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage[french]{babel} %Castellanización
 \usepackage[T1]{fontenc} %escribe lo del teclado
@@ -20,7 +20,7 @@
 \usepackage{enumitem}
 \usepackage{braket}
 \usepackage[makeroom]{cancel}
-\def\p{\ensuremath\partial} 
+\def\p{\ensuremath\partial}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
@@ -29,7 +29,7 @@
 \usepackage{float}
 \usepackage[utf8]{inputenc}
 
- 
+
 \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
@@ -44,11 +44,14 @@
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 
 \newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
- 
+
 \newcommand{\der}[2]{\frac{\text{d} #1}{\text{d} #2}}
 \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\dif}[1]{\text{d}#1}
- 
+\newcommand{\Tr}[1]{\mathrm{Tr}\hspace{1pt}\left[#1\right]}
+\newcommand{\bdot}[0]{\boldsymbol{\cdot}}
+
+
 \begin{document}
 %\tableofcontents
 \title{PHY6650 - Fond. théo. du modèle standard - Résumé}
@@ -57,7 +60,94 @@
 \newpage
 
 \section{Identités de matrice $\gamma$}
-...
+p.31\\
+\begin{equation}
+  \gamma_0 = \gamma^0 = \begin{pmatrix}
+    1 & 0 \\
+    0 & -1\\
+\end{pmatrix} \text{  et   } \gamma^i = \begin{pmatrix}
+  0 & \sigma_i \\
+  -\sigma_i & 0\\
+\end{pmatrix} \quad \implies \quad \{\gamma^\mu, \gamma^\nu\} = 2 g^{\mu\nu}
+\end{equation}
+
+p.41 \\
+\begin{equation}
+  \overline{\psi} = \psi\gamma_0
+\end{equation}
+
+p.42 \\
+\begin{equation}
+  \gamma_5 = \gamma^5 = i\gamma^0\gamma^1\gamma^2\gamma^3\gamma^4 = \frac{i}{4!}\varepsilon_{\mu\nu\rho\sigma}\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma=\begin{pmatrix}0 & 1 \\ 1 & 0\\
+\end{pmatrix}
+\end{equation}
+\begin{equation}
+  \sigma^{\mu\nu} = \{\gamma^\mu,\gamma^\nu\}
+\end{equation}
+
+Devoir 1 \\
+\begin{equation}
+  \gamma^\mu\gamma_\mu = 4
+\end{equation}
+\begin{equation}
+  \gamma^\mu\gamma^\nu\gamma_\mu = -2\gamma^\nu
+\end{equation}
+\begin{equation}
+  \gamma^\mu\gamma^\nu\gamma^\rho\gamma_\mu = 4g^{\nu\rho}
+\end{equation}
+\begin{equation}
+  \gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma\gamma_\mu = -2\gamma^\sigma\gamma^\rho\gamma^\nu
+\end{equation}
+\begin{equation}
+  \gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma\gamma^\tau\gamma_\mu = 2(\gamma^\tau\gamma^\nu\gamma^\rho\gamma^\sigma + \gamma^\sigma\gamma^\rho\gamma^\nu\gamma^\tau)
+\end{equation}
+
+p.113-114 \\
+\begin{equation}
+  \Tr{\gamma^\mu\gamma^\nu} = 4g^{\mu\nu}
+\end{equation}
+\begin{equation}
+  \Tr{\cancel{p}_1...\cancel{p}_n} = 0 \quad \forall\, n\, \in \, 2\Z+1
+\end{equation}
+\begin{equation}
+  \Tr{\cancel{A}\cancel{B}\cancel{C}\cancel{D}} = 4(A\bdot B C \bdot D - A \bdot C B \bdot D + A \bdot D B \bdot C )
+\end{equation}
+
+p.146 \\
+\begin{equation}
+  \Tr{\gamma^\mu} = 0
+\end{equation}
+\begin{equation}
+  \Tr{\gamma_5\cancel{p}_1...\cancel{p}_n} = 0 \quad \forall\, n\, \in \, 2\Z+1
+\end{equation}
+\begin{equation}
+  \Tr{\gamma_5\gamma^\mu\gamma^\nu} = 0
+\end{equation}
+\begin{equation}
+  \Tr{\gamma^\alpha\gamma^\beta\gamma^\gamma\gamma^\delta} = -4i\varepsilon^{\alpha\beta\gamma\delta}
+\end{equation}
+
+p.141-142
+\begin{equation}
+  \gamma_L = \frac{1}{2}(1-\gamma_5) \quad \implies \quad \gamma_L^2 = \gamma_L
+\end{equation}
+\begin{equation}
+  \gamma_R = \frac{1}{2}(1+\gamma_5) \quad \implies \quad \gamma_R^2 = \gamma_R
+\end{equation}
+\begin{equation}
+  \psi_L = \gamma_L\psi \quad \implies \quad \overline{\psi}_L = \overline{\psi}\gamma_R
+\end{equation}
+\begin{equation}
+  \psi_R = \gamma_R\psi \quad \implies \quad \overline{\psi}_R = \overline{\psi}\gamma_L
+\end{equation}
+
+p.255 \\
+\begin{equation}
+  \psi^c = C\psi^T \quad \text{où} \quad C = i\gamma^0\gamma^2
+\end{equation}
+\begin{equation}
+  (\psi_L)^c = \gamma_R\psi^c \quad \implies \quad \overline{(\psi_L)^c} = \overline{\psi^c}\gamma_L
+\end{equation}
 
 \section{Section efficace}
 ...
@@ -68,6 +158,14 @@
 \section{Règles de Feynman}
 ...
 
+\section{Polarisations}
+p.133 \\
+\begin{equation}
+  \sum_{polarisation} \varepsilon_\mu^*\varepsilon_\nu = - g_{\mu\nu} \quad \text{photon}
+\end{equation}
+\begin{equation}
+  \sum_{polarisation} \varepsilon_\mu^*\varepsilon_\nu = - \left[g_{\mu\nu}- \frac{P_\mu P_\nu}{P^2}\right] \quad \text{W}
+\end{equation}
 
 
 
