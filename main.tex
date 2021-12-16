@@ -60,7 +60,9 @@
 \newpage
 
 \section{Matrices de Pauli}
-...
+\begin{equation}
+    \sigma_1 = \begin{pmatrix} 0 & 1\\ 1 & 0\\ \end{pmatrix} \quad , \quad \sigma_2 = \begin{pmatrix} 0  & -i \\ i & 0\\ \end{pmatrix} \quad , \quad \sigma_3 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \\ \end{pmatrix}
+\end{equation}
 
 \section{Identités de matrice $\gamma$}
 p.31\\
@@ -144,23 +146,154 @@ p.255 \\
   (\psi_L)^c = \gamma_R\psi^c \quad \implies \quad \overline{(\psi_L)^c} = \overline{\psi^c}\gamma_L
 \end{equation}
 
+\section{Variables de Mandelstam}
+p. 118
+
+Pour un processus $(p, p') \rightarrow (k, k')$ :
+\begin{align}
+ E_{CM}^2 =  s &= (p + p')^2 = (k + k')^2 \\
+  t &= (k - p)^2 = (k' - p')^2 \\
+  u &= (k - p')^2 = (k' - p)^2 
+\end{align}
+
+\begin{equation}
+  \Rightarrow s+t+u = \sum_{i=1}^4 m_i^2
+\end{equation}
+
 \section{Section efficace}
-...
+p. 128 
+
+Pour une interaction $\alpha (1,2) \rightarrow \beta (3,.., n)$ :
+\begin{align}
+d\sigma_{\beta\alpha} = \frac{(2\pi)^4 \delta^{4}(p_\beta - p_\alpha)}{2 \sqrt{s - (m_1 + m_2)^2} \sqrt{s - (m_1 - m_2)^2}} |\mathcal{M_{\beta\alpha}}| \prod_{i=3}^n \frac{d^3p_i}{2E_i (2\pi)^3} \prod_{k}^{types} \frac{1}{n_k!}
+\end{align}
+
+Pour une désintégration $\alpha (1) \rightarrow \beta (2,..., n)$ :
+\begin{align}
+d\Gamma_{\beta\alpha} = \frac{(2\pi)^4 \delta^4 (p_\beta - p_\alpha)}{2E_0} |\mathcal{M_{\beta\alpha}}| \prod_{i=2}^n {\frac{d^3 p_i}{2 E_i (2\pi)^3}} \prod_{k}^{types} \frac{1}{n_k!}
+\end{align}
 
 \section{Taux de désintégration calculés en classe}
 ...
 
-\section{Règles de Feynman}
-...
+\section{Règles de Feynman pour l'amplitude d'interaction}
 
-\section{Polarisations}
+\hfill \break
+Les règles de Feynman pour les lignes fermioniques sont (p. 108) : 
+
+\begin{itemize}
+  \item création d'un fermion : $\overline{u}$
+  \item annihilation d'un fermion : $u$
+  \item création d'un anti-fermion : $v$
+  \item annihilation d'un anti-fermion : $\overline{v}$
+\end{itemize}
+
+\hfill \break
+Les termes de vertex sont (p. 108 et devoir 6) :
+
+\begin{itemize}
+  \item $ff\gamma$ : $-ie\gamma^\mu$
+  \item $ffW$ : $\displaystyle \frac{ig}{\sqrt{2}} \gamma_\mu \gamma_L$
+  \item $ffZ$ : $\displaystyle \frac{ig}{2 \cos{\theta}_W} \gamma_\mu \gamma_L$
+  \item $ZWW$ : $ig\cos{\theta}_W [ g_{\mu\nu}(k-p)_\alpha +  g_{\nu\alpha}(k-p)_\mu +  g_{\alpha\mu}(k-p)_\nu]$
+\end{itemize} 
+
+\hfill \break
+Les propagateurs sont :
+
+\begin{itemize}
+  \item Fermion (p. 86) : $\displaystyle \frac{i(\cancel{p} + m)}{p^2 - m^2}$ 
+  \item Photon (p. 94) : $\displaystyle \frac{-i g_{\mu\nu}}{p^2}$
+  \item W et Z (p. 167 et devoir 6) : $\displaystyle \frac{-i(g_{\mu\nu} - p^\mu p^\nu/M^2)}{p^2-M^2}$
+\end{itemize}
+
+\hfill \break
+Chaque boson créé nécessite aussi un terme de polarisation : $\epsilon_\mu$
+
+\subsection{Notes sur les calculs de section efficace}
+
+p. 123 
+
+\begin{equation}
+  d^3 k = |\vec{k}| E_k dE_k d\Omega
+\end{equation}
+
+\begin{equation}
+  \int f(x) \delta(g(x)) dx = \sum_i^{g(x_i)=0} \frac{f(x_i)}{|g'(x_i)|}
+\end{equation}
+
+\section{Équations fondamentales}
+Convention : $c=\hbar=1$ \\
+
+\textbf{Équation de Klein-Gordon} (p.25)
+\begin{equation}
+    \left[\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \Vec{\nabla}^2 + \left(\frac{mc}{\hbar}\right)\right]\phi = 0 \quad \iff \quad [\Box + m] \phi = 0
+\end{equation}
+
+où $\Box = \partial_\mu\partial^\mu$.\\
+
+\textbf{Équation énergie-masse-impulsion} (p.25)
+\begin{equation}
+    E^2 = \Vec{p}^2 + m^2
+\end{equation}
+
+\textbf{Équation de Dirac} (p.30)
+\begin{equation}
+    (\cancel{p} -m )\psi = 0
+\end{equation}
+
+\textbf{Équation de Dirac conjuguée} (Devoir 3 Question 2)
+\begin{equation}
+    \overline{\psi}(\cancel{p} -m ) = 0
+\end{equation}
+
+
+\section{Spins et polarisations}
+p.53
+\begin{align}
+    \sum_s u(p,s)\Bar{u}(p,s) &= (\cancel{p}+m)\\
+    \sum_s v(p,s)\Bar{v}(p,s) &= (\cancel{p}-m)
+\end{align}
+
 p.133 \\
 \begin{align}
   \sum_{polarisation} \varepsilon_\mu^*\varepsilon_\nu &= - g_{\mu\nu} \quad \text{(photon)}\\
   \sum_{polarisation} \varepsilon_\mu^*\varepsilon_\nu &= - \left[g_{\mu\nu}- \frac{P_\mu P_\nu}{P^2}\right] \quad \text{(boson W)}
 \end{align}
 
+\section{Chiralité et hélicité}
+\begin{align}
+    u(p)^+ &= \begin{bmatrix}
+      \begin{pmatrix}
+          1\\ 0
+      \end{pmatrix}\\
+      \begin{pmatrix}
+          1\\ 0
+      \end{pmatrix}
+    \end{bmatrix}
+    \quad \text{(hélicité droite)}\\
+    u(p)^- &= \begin{bmatrix}
+      \begin{pmatrix}
+          0\\1
+      \end{pmatrix}\\
+      -\begin{pmatrix}
+          0\\1
+      \end{pmatrix}
+    \end{bmatrix}
+    \quad \text{(hélicité gauche)}\\
+    \phi &=
+    \begin{pmatrix}
+          1\\ 0
+     \end{pmatrix}
+     \quad \text{(chiralité droite)}\\
+     \phi &=
+    \begin{pmatrix}
+          0\\1
+      \end{pmatrix}
+      \quad \text{(chiralité gauche)}
+\end{align}
 
+Les particules sans masses sont d'hélicité et de chiralité droite. Similairement, les antiparticules sans masses sont d'hélicité et de chiralité gauche.
 
 
 \end{document}
