@@ -75,10 +75,12 @@ p.31\\
   -\sigma_i & 0\\
 \end{pmatrix} \quad \implies \quad \{\gamma^\mu, \gamma^\nu\} = 2 g^{\mu\nu}
 \end{equation}
-
+\begin{equation}
+  \gamma^{\mu\dag} = \gamma^0 \gamma^\mu \gamma^0 = ( \gamma^0; -\gamma^i )
+\end{equation}
 p.41 \\
 \begin{equation}
-  \overline{\psi} = \psi\gamma_0
+  \overline{\psi} = \psi^\dag\gamma_0
 \end{equation}
 
 p.42 \\
@@ -140,7 +142,10 @@ p.141-142
 
 p.255 \\
 \begin{equation}
-  \psi^c = C\psi^T \quad \text{où} \quad C = i\gamma^0\gamma^2
+  \psi^c = C\overline{\psi}^T \quad \text{où} \quad C = i\gamma^0\gamma^2
+\end{equation}
+\begin{equation}
+  \overline{\psi^c} = 
 \end{equation}
 \begin{equation}
   (\psi_L)^c = \gamma_R\psi^c \quad \implies \quad \overline{(\psi_L)^c} = \overline{\psi^c}\gamma_L
@@ -165,12 +170,12 @@ p. 128
 
 Pour une interaction $\alpha (1,2) \rightarrow \beta (3,.., n)$ :
 \begin{align}
-d\sigma_{\beta\alpha} = \frac{(2\pi)^4 \delta^{4}(p_\beta - p_\alpha)}{2 \sqrt{s - (m_1 + m_2)^2} \sqrt{s - (m_1 - m_2)^2}} |\mathcal{M_{\beta\alpha}}| \prod_{i=3}^n \frac{d^3p_i}{2E_i (2\pi)^3} \prod_{k}^{types} \frac{1}{n_k!}
+d\sigma_{\beta\alpha} = \frac{(2\pi)^4 \delta^{4}(p_\beta - p_\alpha)}{2 \sqrt{s - (m_1 + m_2)^2} \sqrt{s - (m_1 - m_2)^2}} |\mathcal{M_{\beta\alpha}}|^2 \prod_{i=3}^n \frac{d^3p_i}{2E_i (2\pi)^3} \prod_{k}^{types} \frac{1}{n_k!}
 \end{align}
 
 Pour une désintégration $\alpha (1) \rightarrow \beta (2,..., n)$ :
 \begin{align}
-d\Gamma_{\beta\alpha} = \frac{(2\pi)^4 \delta^4 (p_\beta - p_\alpha)}{2E_0} |\mathcal{M_{\beta\alpha}}| \prod_{i=2}^n {\frac{d^3 p_i}{2 E_i (2\pi)^3}} \prod_{k}^{types} \frac{1}{n_k!}
+d\Gamma_{\beta\alpha} = \frac{(2\pi)^4 \delta^4 (p_\beta - p_\alpha)}{2E_0} |\mathcal{M_{\beta\alpha}}|^2 \prod_{i=2}^n {\frac{d^3 p_i}{2 E_i (2\pi)^3}} \prod_{k}^{types} \frac{1}{n_k!}
 \end{align}
 
 \section{Taux de désintégration calculés en classe}
@@ -195,8 +200,9 @@ Les termes de vertex sont (p. 108 et devoir 6) :
   \item $ff\gamma$ : $-ie\gamma^\mu$
   \item $ffW$ : $\displaystyle \frac{ig}{\sqrt{2}} \gamma_\mu \gamma_L$
   \item $ffZ$ : $\displaystyle \frac{ig}{2 \cos{\theta}_W} \gamma_\mu \gamma_L$
-  \item $ZWW$ : $ig\cos{\theta}_W [ g_{\mu\nu}(k-p)_\alpha +  g_{\nu\alpha}(k-p)_\mu +  g_{\alpha\mu}(k-p)_\nu]$
-\end{itemize}
+  \item $Z(q) W^+(p) W^-(k)$ (avec $p + k + q = 0$) : $ig\cos{\theta}_W [ g_{\mu\nu}(k-p)_\alpha +  g_{\nu\alpha}(k-p)_\mu +  g_{\alpha\mu}(k-p)_\nu]$
+\end{itemize} 
+
 
 \hfill \break
 Les propagateurs sont :
